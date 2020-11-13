@@ -13,6 +13,16 @@ var movies = [{
   "title": "Arrival",
   "year": 2016,
   "youtubeId": "tFMo3UJ4B4g"
+},
+{
+  "title": "2001: A Space Odyssey",
+  "year": 1968,
+  "youtubeId": "oR_e9y-bka0"
+},
+{
+  "title": "Terminator: 2",
+  "year": 1991,
+  "youtubeId": "lwSysg9o7wE"
 }
 ];
 
@@ -28,12 +38,103 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // after the API code downloads.
 
 let movieId;
+let movieName;
+let movieYear;
+
 for (i = 0; i < movies.length; i++) {
   if (document.getElementById("title").innerHTML == movies[i].title) {
     movieId = movies[i].youtubeId;
+    movieName = movies[i].title;
+    movieYear = movies[i].year;
   }
 }
 
+switch (movieName) {
+
+  case "Alien":
+    console.log("Case 1");
+    fetch("https://www.omdbapi.com/?t=" + movieName + "&y=" + movieYear + "&apikey=da942d52")
+      .then(response => response.json())
+      .then(data => {
+        let currentYear = new Date();
+        let currentMovieYear = new Date(data.Released);
+        let differenceYear = Math.floor((currentYear.getTime() - currentMovieYear.getTime()) / (1000 * 3600 * 24 * 365));
+
+        document.getElementById("movieReleased").innerHTML = data.Released;
+        document.getElementById("yearCalc").innerHTML = "(" + differenceYear + " years since movie originally released)";
+        document.getElementById("movieDirector").innerHTML = data.Director;
+        document.getElementById("movieWriter").innerHTML = data.Writer;
+        document.getElementById("movieActor").innerHTML = data.Actors;
+        document.getElementById("movieGenre").innerHTML = data.Genre;
+        document.getElementById("movieDescription").innerHTML = data.Plot;
+        let ratingList = document.getElementById("ratingList");
+
+        data.Ratings.forEach(rating => {
+          let ratingItem = document.createElement('li');
+          ratingItem.appendChild(document.createElement('strong')).textContent = rating.Source;
+          ratingItem.append(" " + rating.Value);
+
+          ratingList.appendChild(ratingItem);
+        });
+      });
+    break;
+
+  case "Arrival":
+    fetch("https://www.omdbapi.com/?t=" + movieName + "&y=" + movieYear + "&apikey=da942d52")
+      .then(response => response.json())
+      .then(data => {
+        let currentYear = new Date();
+        let currentMovieYear = new Date(data.Released);
+        let differenceYear = Math.floor((currentYear.getTime() - currentMovieYear.getTime()) / (1000 * 3600 * 24 * 365));
+
+        document.getElementById("movieReleased").innerHTML = data.Released;
+        document.getElementById("yearCalc").innerHTML = "(" + differenceYear + " years since movie originally released)";
+        document.getElementById("movieDirector").innerHTML = data.Director;
+        document.getElementById("movieWriter").innerHTML = data.Writer;
+        document.getElementById("movieActor").innerHTML = data.Actors;
+        document.getElementById("movieGenre").innerHTML = data.Genre;
+        document.getElementById("movieDescription").innerHTML = data.Plot;
+        let ratingList = document.getElementById("ratingList");
+
+        data.Ratings.forEach(rating => {
+          let ratingItem = document.createElement('li');
+          ratingItem.appendChild(document.createElement('strong')).textContent = rating.Source;
+          ratingItem.append(" " + rating.Value);
+
+          ratingList.appendChild(ratingItem);
+        });
+      });
+    break;
+
+  case "Avatar":
+    fetch("https://www.omdbapi.com/?t=" + movieName + "&y=" + movieYear + "&apikey=da942d52")
+      .then(response => response.json())
+      .then(data => {
+        let currentYear = new Date();
+        let currentMovieYear = new Date(data.Released);
+        let differenceYear = Math.floor((currentYear.getTime() - currentMovieYear.getTime()) / (1000 * 3600 * 24 * 365));
+
+        document.getElementById("movieReleased").innerHTML = data.Released;
+        document.getElementById("yearCalc").innerHTML = "(" + differenceYear + " years since movie originally released)";
+        document.getElementById("movieDirector").innerHTML = data.Director;
+        document.getElementById("movieWriter").innerHTML = data.Writer;
+        document.getElementById("movieActor").innerHTML = data.Actors;
+        document.getElementById("movieGenre").innerHTML = data.Genre;
+        document.getElementById("movieDescription").innerHTML = data.Plot;
+        let ratingList = document.getElementById("ratingList");
+
+        data.Ratings.forEach(rating => {
+          let ratingItem = document.createElement('li');
+          ratingItem.appendChild(document.createElement('strong')).textContent = rating.Source;
+          ratingItem.append(" " + rating.Value);
+
+          ratingList.appendChild(ratingItem);
+        });
+      });
+    break;
+  default:
+    break;
+}
 
 let player;
 function onYouTubeIframeAPIReady() {
@@ -50,7 +151,7 @@ function onYouTubeIframeAPIReady() {
 
 //  The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-  event.target.playVideo();
+  //event.target.playVideo();
 }
 
 //  The API calls this function when the player's state changes.
@@ -58,10 +159,10 @@ function onPlayerReady(event) {
 //  the player should play for six seconds and then stop.
 let done = false;
 function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
+  /*if (event.data == YT.PlayerState.PLAYING && !done) {
+    //setTimeout(stopVideo, 6000);
+    //done = true;
+  }*/
 }
 function stopVideo() {
   player.stopVideo();
