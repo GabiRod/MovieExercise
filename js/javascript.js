@@ -50,7 +50,6 @@ for (i = 0; i < movies.length; i++) {
     switch (movieName) {
 
       case "Alien":
-        console.log("Case 1");
         fetch("https://www.omdbapi.com/?t=" + movieName + "&y=" + movieYear + "&apikey=da942d52")
           .then(response => response.json())
           .then(data => {
@@ -68,7 +67,7 @@ for (i = 0; i < movies.length; i++) {
             let ratingList = document.getElementById("ratingList");
     
             data.Ratings.forEach(rating => {
-              let ratingItem = document.createElement('li');
+              let ratingItem = document.createElement('p');
               ratingItem.appendChild(document.createElement('strong')).textContent = rating.Source;
               ratingItem.append(" " + rating.Value);
     
@@ -95,7 +94,7 @@ for (i = 0; i < movies.length; i++) {
             let ratingList = document.getElementById("ratingList");
     
             data.Ratings.forEach(rating => {
-              let ratingItem = document.createElement('li');
+              let ratingItem = document.createElement('p');
               ratingItem.appendChild(document.createElement('strong')).textContent = rating.Source;
               ratingItem.append(" " + rating.Value);
     
@@ -122,7 +121,7 @@ for (i = 0; i < movies.length; i++) {
             let ratingList = document.getElementById("ratingList");
     
             data.Ratings.forEach(rating => {
-              let ratingItem = document.createElement('li');
+              let ratingItem = document.createElement('p');
               ratingItem.appendChild(document.createElement('strong')).textContent = rating.Source;
               ratingItem.append(" " + rating.Value);
     
@@ -137,8 +136,8 @@ for (i = 0; i < movies.length; i++) {
     let player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        height: '390',
-        width: '640',
+        height: '100%',
+        width: '100%',
         videoId: movieId,
         events: {
           'onReady': onPlayerReady,

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title id="title">Arrival</title>
-  </head>
-  <body>
-    <header>
-      <h1><a class="backArrow" href="./index.html"><i class="fa fa-chevron-left"></i></a> Andreas favourites movies</h1>
-    </header>
-    <section class="movie-details">
-      <h1>Arrival</h1>
-      <div id="player"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title id="title">Arrival</title>
+</head>
+
+<body>
+  <header>
+    <h1><a class="backArrow" href="./index.html"><i class="fa fa-chevron-left"></i></a> Andreas favourites movies</h1>
+  </header>
+  <section class="movie-details">
+    <h1>Arrival</h1>
+    <div id="player"></div>
+    <div class="movie-details-description">
+
       <p><b>Released:</b> <span id="movieReleased"></span> <span id="yearCalc"></span></p>
       <p><b>Director(s):</b> <span id="movieDirector"></span></p>
       <p><b>Writer(s):</b> <span id="movieWriter"></span></p>
@@ -24,10 +25,11 @@
       <p><b>Genre:</b> <span id="movieGenre"></span></p>
       <p><b>Description:</b> <span id="movieDescription"></span></p>
       <p><strong>Ratings:</strong></p>
-      <ul id="ratingList">
+      <div id="ratingList"></div>
 
-      </ul>
-    </section>
-  </body>
-  <script src="js/javascript.js"></script>
+    </div>
+  </section>
+</body>
+<script src="js/javascript.js"></script>
+
 </html>
