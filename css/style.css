@@ -62,7 +62,7 @@ a {
   }
 
   .movie-image {
-    max-width: 100%;
+    width: 100%;
   }
   #player {
     min-height: 240px;
@@ -80,10 +80,6 @@ a {
   .movie-list {
     grid-template-columns: auto auto;
   }
-
-  .movie-image {
-    max-width: 100%;
-  }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -93,11 +89,10 @@ a {
   .movie-list {
     grid-template-columns: auto auto auto;
   }
-
-  .movie-image {
-    max-width: 100%;
-  }
 }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
+  .movies {
+    padding: 0px 10%;
+  }
 }
