@@ -40,8 +40,14 @@ a {
   color: black;
 }
 
+#movieTitle{
+  text-align: center;
+}
+
 .movie-details {
   text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 #player {
