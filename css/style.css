@@ -8,11 +8,12 @@ header {
   background-color: cadetblue;
   color: white;
   padding: 20px;
+  box-shadow: grey 5px 5px 10px;
 }
 
 .backArrow {
   color: white;
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0 1rem 0 0.5rem;
 }
 
 .movie-list {
@@ -55,6 +56,21 @@ a {
   padding: 0.5rem;
 }
 
+.movie-button {
+  background: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  padding: 15px 40px;
+  margin-top: 600px;
+  box-shadow: grey 5px 5px 10px;
+}
+.movie-button:hover {
+  background-color: cadetblue;
+  color: white;
+}
+
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .movie-list {
@@ -64,9 +80,10 @@ a {
   .movie-image {
     float: left;
     width: 100%;
-    height: 600px;
+    height: 400px;
     object-fit: cover;
   }
+
   #player {
     min-height: 240px;
   }
@@ -81,16 +98,27 @@ a {
 @media (min-width: 600px) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
   .movie-list {
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
+  }
+
+  .movie-image {
+    height: 600px;
+  }
+
+  .movie-button {
+    margin-top: 500px;
   }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .movie-image {
+    height: 700px;
+  }
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
   .movie-list {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33.3% 33.3% 33.3%;
   }
 }
 @media (min-width: 1281px) {
