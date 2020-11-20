@@ -1,14 +1,16 @@
 body {
   padding: 0;
   margin: 0;
+  background-image: ../img/space-background-website.jpeg;
   background-color: whitesmoke;
 }
 
 header {
-  background-color: cadetblue;
+  background-color: #6C6EA0;
   color: white;
   padding: 20px;
   box-shadow: grey 5px 5px 10px;
+  
 }
 
 .backArrow {
@@ -24,6 +26,7 @@ header {
 }
 
 .movie-element {
+  background-color : #DCD6F7;
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
