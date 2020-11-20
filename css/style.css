@@ -11,6 +11,11 @@ header {
   box-shadow: grey 5px 5px 10px;
 }
 
+.andreas-head {
+  height: 50%;
+  margin: 0px 25px;
+}
+
 .backArrow {
   color: white;
   padding: 0 1rem 0 0.5rem;
@@ -40,14 +45,18 @@ a {
   color: black;
 }
 
-#movieTitle{
+#movieTitle {
   text-align: center;
 }
 
 .movie-details {
-  text-align: center;
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.movie-details {
+  display: grid;
+  grid-template-columns: auto;
 }
 
 #player {
@@ -55,11 +64,13 @@ a {
   margin: 1rem 0;
   min-width: 280px;
   max-width: 640px;
+  justify-self: center;
 }
 
 .movie-details-description {
   box-shadow: grey 5px 5px 10px;
   padding: 0.5rem;
+  justify-self: center;
 }
 
 .movie-button {
@@ -127,6 +138,11 @@ a {
   /* big landscape tablets, laptops, and desktops */
   .movie-list {
     grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
+  .movie-details {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
   }
 }
 @media (min-width: 1281px) {
