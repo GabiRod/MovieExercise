@@ -1,24 +1,23 @@
 body {
   padding: 0;
   margin: 0;
-  background-image:url("../img/space-background-website.jpeg");
+  background-image: url("../img/space-background-website.jpeg");
   background-color: whitesmoke;
 }
 
 header {
-  background-color: #6C6EA0;
+  background-color: #6c6ea0;
   color: white;
   padding: 20px;
   box-shadow: grey 5px 5px 10px;
-  
 }
 
 .h1-class {
-text-align : center;
+  text-align: center;
 }
 
 .andreas-head {
-  height: 50%;
+  height: 60px;
   margin: 0px 25px;
 }
 
@@ -35,25 +34,24 @@ text-align : center;
 }
 
 .movie-element {
-  background-color : #DCD6F7;
+  background-color: #dcd6f7;
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
   box-shadow: grey 5px 5px 10px;
 }
 
-.movie-title {
-  text-align: center;
-  padding: 5px 0px;
-}
-
 a {
   text-decoration: none;
   color: black;
 }
+.movie-title {
+  text-align: center;
+}
 
 #movieTitle {
   text-align: center;
+  color: white;
 }
 
 .movie-details {
@@ -76,8 +74,13 @@ a {
 
 .movie-details-description {
   box-shadow: grey 5px 5px 10px;
-  padding: 0.5rem;
+  padding: 1rem;
   justify-self: center;
+  background-color: black;
+  color: white;
+  margin: 1rem 0px;
+  margin-right: 5%;
+  font-size: 20px;
 }
 
 .movie-button {
