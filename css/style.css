@@ -76,11 +76,11 @@ a {
   box-shadow: grey 5px 5px 10px;
   padding: 1rem;
   justify-self: center;
-  background-color: black;
   color: white;
   margin: 1rem 0px;
   margin-right: 5%;
   font-size: 20px;
+  background-image: linear-gradient(to bottom, #6c6ea0, #8887b5, #a4a0cb, #c0bbe1, #dcd6f7);
 }
 
 .movie-button {
