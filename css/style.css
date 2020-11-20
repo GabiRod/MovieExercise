@@ -13,6 +13,10 @@ header {
   
 }
 
+.h1-class {
+text-align : center;
+}
+
 .backArrow {
   color: white;
   padding: 0 1rem 0 0.5rem;
