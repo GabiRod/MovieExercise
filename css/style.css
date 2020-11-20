@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: ../img/space-background-website.jpeg;
+  background-image:url("../img/space-background-website.jpeg");
   background-color: whitesmoke;
 }
 
