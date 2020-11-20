@@ -6,10 +6,10 @@ body {
 }
 
 header {
-  background-color: #6c6ea0;
+  background-color: #000;
   color: white;
-  padding: 20px;
-  box-shadow: grey 5px 5px 10px;
+  padding: 5px 20px;
+  box-shadow: rgb(48, 47, 47) 5px 5px 10px;
 }
 
 .h1-class {
@@ -18,7 +18,7 @@ header {
 
 .andreas-head {
   height: 60px;
-  margin: 0px 25px;
+  margin: 0px 5px;
 }
 
 .backArrow {
@@ -34,11 +34,11 @@ header {
 }
 
 .movie-element {
-  background-color: #dcd6f7;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
-  box-shadow: grey 5px 5px 10px;
+  box-shadow: rgb(68, 67, 67) 5px 5px 10px;
 }
 
 a {
@@ -47,16 +47,28 @@ a {
 }
 .movie-title {
   text-align: center;
+  color: white;
 }
 
 #movieTitle {
   text-align: center;
   color: white;
+  border-bottom: 1px solid white;
+}
+
+.movie-container {
+  background-color: #000000;
+  margin: 1% 5%;
+  padding: 20px 0 20px 0px;
+  box-shadow: rgb(48, 47, 47) 5px 5px 10px;
 }
 
 .movie-details {
   display: grid;
   grid-template-columns: auto auto;
+  background-color: #000000;
+  color: white;
+  padding: 10px 0 100px 0px;
 }
 
 .movie-details {
@@ -65,7 +77,6 @@ a {
 }
 
 #player {
-  box-shadow: grey 5px 5px 10px;
   margin: 1rem 0;
   min-width: 280px;
   max-width: 640px;
@@ -73,14 +84,12 @@ a {
 }
 
 .movie-details-description {
-  box-shadow: grey 5px 5px 10px;
   padding: 1rem;
   justify-self: center;
   color: white;
   margin: 1rem 0px;
   margin-right: 5%;
   font-size: 20px;
-  background-image: linear-gradient(to bottom, #6c6ea0, #8887b5, #a4a0cb, #c0bbe1, #dcd6f7);
 }
 
 .movie-button {
@@ -92,7 +101,7 @@ a {
   padding: 15px 40px;
   margin-top: 600px;
   margin-left: 25vw;
-  box-shadow: grey 5px 5px 10px;
+  box-shadow: rgb(68, 67, 67) 5px 5px 10px;
 }
 .movie-button:hover {
   background-color: cadetblue;
@@ -114,6 +123,14 @@ a {
 
   #player {
     min-height: 240px;
+  }
+
+  .h1-class {
+    font-size: 20px;
+  }
+
+  .andreas-head {
+    height: 20px;
   }
 }
 
@@ -137,6 +154,10 @@ a {
     margin-top: 500px;
     margin-left: 15vw;
   }
+
+  .h1-class {
+    font-size: 30px;
+  }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -152,7 +173,7 @@ a {
 
   .movie-details {
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 50vw auto;
   }
 }
 @media (min-width: 1281px) {
