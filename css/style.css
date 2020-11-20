@@ -62,7 +62,10 @@ a {
   }
 
   .movie-image {
+    float: left;
     width: 100%;
+    height: 600px;
+    object-fit: cover;
   }
   #player {
     min-height: 240px;
